@@ -1,0 +1,22 @@
+const arr = [
+{
+  title :"Norwegian Wood",
+  author:"Haruki Murakami"
+},
+{
+  title :"Rich Dad Poor Dad",
+  author:"Robert & Sharon"
+},
+{
+  title :"Zero to one",
+  author:"peter theil"
+},
+{
+  title :"Blue ocean statergy",
+  author:"Kimm"
+}]
+function findBook(arr,title){
+  return arr.find(i =>i.title.toLowerCase() === title.toLowerCase())
+}
+
+console.log(findBook(arr,"ZERO TO ONE"))
