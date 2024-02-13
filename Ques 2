@@ -1,0 +1,6 @@
+const arr = ['ab','bcd','e','fghijk','xy','zee']
+function findLength(arr){
+  return arr.map(i => i.length)
+}
+
+console.log(arr,findLength(arr))
