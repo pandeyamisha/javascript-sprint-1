@@ -1,0 +1,16 @@
+const expenses = 
+{
+  food :3000,
+  rent:5000,
+  grocery:1500,
+  miscellaneous:1000,
+  dailyCommute:2500
+}
+
+function totalExpense(expenses){
+return Object.values(expenses).reduce((acc,curr)=>{
+    return acc+= curr;
+},0)
+}
+
+console.log(totalExpense(expenses));
