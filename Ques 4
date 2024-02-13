@@ -1,0 +1,22 @@
+const arr = [
+{
+  name :"Norwegian",
+  age:32
+},
+{
+  name :"Wood",
+  age:25
+},
+{
+  name :"Haruki",
+  age:18
+},
+{
+  name :"Murakami",
+  age:19
+}]
+function findPeople(arr){
+  return arr.filter(i => i.age >=9).map(i => i.name)
+}
+
+console.log(findPeople(arr))
