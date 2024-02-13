@@ -1,0 +1,5 @@
+const arr = [5,2,8,90,1,20]
+function isEvenNumber(arr){
+  return arr.filter(i => i%2 ===0)
+};
+console.log("Even Numbers",isEvenNumber(arr))
