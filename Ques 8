@@ -1,0 +1,20 @@
+const fruitsObj = 
+{ 
+"Mango":25,
+"Apple":9,
+"Banana":12,
+"Pear":18,
+"Guava":2,
+"Peach":10}
+
+let result =[]
+
+function filterFruits(fruitsObj){
+ Object.entries(fruitsObj).filter(function(fruit){
+ if (fruit[1] < 11){
+  return result.push(fruit[0]);
+ }
+ })
+return result;
+}
+console.log(filterFruits(fruitsObj))
