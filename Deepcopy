@@ -1,0 +1,21 @@
+const originalObj = {
+  string: 'string',
+  number: 123,
+  bool: false,
+  nul: null,
+  date: new Date(),  
+  undef: undefined,  
+  inf: Infinity,  
+  re: /.*/,  
+}
+console.log(originalObj);
+
+const newObj= {}
+function deepCopy(originalObj){
+const keys= Object.keys(originalObj)
+  for(i in keys){
+newObj[keys[i]]= originalObj[keys[i]]
+  }
+}
+
+console.log(deepCopy(originalObj))
