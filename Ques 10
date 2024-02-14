@@ -1,0 +1,12 @@
+const productDetils =[
+  {name:"phone",price:"10000"},
+  {name:"latop",price:"70000"},
+  {name:"watch",price:"5000"},
+  {name:"television",price:"50000"}
+]
+
+function sortProducts(productDetils){
+ return productDetils.sort((a,b) =>a.price -b.price)
+}
+
+console.log(sortProducts(productDetils))
