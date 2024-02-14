@@ -1,0 +1,12 @@
+const userDetails = 
+{
+ name:"Amisha",
+ age:25,
+ email:"xyz@gmail.com"
+}
+
+function setProperty(userDetails){
+ userDetails.isActive = true
+ return userDetails
+}
+console.log(setProperty(userDetails))
