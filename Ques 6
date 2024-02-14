@@ -1,0 +1,33 @@
+const pathList = 
+{
+ RootFolder: {
+    FolderA: {
+        FolderB: {
+            FileA: "fileA",
+            FileB: "FileB",
+            FolderC: {
+                FileC: "fileC",
+                FileD: "fileD"
+            }
+        }
+    }
+}
+}
+const filePath =[]
+function findFilePath(pathList,fileName){ 
+  for(i in pathList){
+  if(typeof pathList[i] === 'object'){
+  filePath.push(i)
+  findFilePath(pathList[i],fileName)
+  }
+  else{
+    if(pathList[i] === fileName){
+    filePath.push(pathList[i])
+    break;
+  }
+}
+  }
+  return filePath.join('\\')
+}
+
+console.log(findFilePath(pathList,"fileC"))
