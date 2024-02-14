@@ -1,0 +1,30 @@
+const members ={
+  greatGrandParents:{
+   count :1,
+   grandParents:{
+    count :3,
+    Parents:{
+    count :6,
+  children:{
+    count :8,
+  }
+}
+}
+  }
+}
+let count = 0;
+function familyCount(members){
+  for( let i in members){
+    if(typeof members[i] === 'object'){
+      count+=members[i].count;
+      familyCount(members[i])
+    }
+    else{
+      continue;
+    }
+    return count;
+  }
+
+}
+
+console.log(familyCount(members))
