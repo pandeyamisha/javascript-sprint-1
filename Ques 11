@@ -1,0 +1,8 @@
+const wordsArr =["avocado","productDetils","qwertry","typewriter","notify"]
+
+function longestWord(wordsArr){
+const lengthArr = wordsArr.map(i=>i.length)
+return wordsArr.find( i => i.length ===Math.max(...lengthArr))
+}
+
+console.log(longestWord(wordsArr))
