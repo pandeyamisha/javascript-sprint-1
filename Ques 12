@@ -1,0 +1,27 @@
+const students = [
+  {
+    name :"John",
+    grade:"E",
+    age:15,
+  },
+  {
+    name :"Wood",
+    grade:"A",
+    age:14
+  },
+  {
+    name :"Haruki",
+    grade:"B",
+    age:12
+  },
+  {
+    name :"Murakami",
+    grade:"C",
+    age:18
+  }]
+
+function sortStudents(students){
+return students.sort((a,b) => b.grade-a.grade).sort((a,b) => a.age-b.age)
+}
+
+console.log(sortStudents(students))
