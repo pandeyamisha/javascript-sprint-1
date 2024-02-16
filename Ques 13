@@ -1,0 +1,41 @@
+const originalObj1 = {
+  string: 'string',
+  a:{
+    b:{
+      c:{
+        e:'abc'
+      }
+    }
+  },
+ 
+}
+const originalObj2 = {
+  string: 'string',
+  a:{
+    b:{
+      c:'d'
+    }
+  },
+ 
+}
+
+function deepObjectComparision(obj1,obj2){
+  const obj1entries = Object.keys(obj1)
+  const obj2entries = Object.keys(obj2)
+  if(obj1entries.length !== obj2entries.length){
+    return "Not Equal"
+  }
+  else{
+    for(i in obj1){
+      if(typeof obj1[i] === "object"){
+      deepObjectComparision(obj1[i],obj2[i])
+      }
+      else if(obj1[i] !== obj2[i]){
+       return "Not Eqaul"
+      }
+    }
+    return "Equal"
+  }
+
+}
+console.log(deepObjectComparision(originalObj1,originalObj2))
