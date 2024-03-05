@@ -13,21 +13,23 @@ const pathList =
     }
 }
 }
-const filePath =[]
+let filePath =""
 function findFilePath(pathList,fileName){ 
   for(i in pathList){
   if(typeof pathList[i] === 'object'){
-  filePath.push(i)
+  filePath+= i+'\\'
+
+  console.log(filePath)
   findFilePath(pathList[i],fileName)
   }
   else{
     if(pathList[i] === fileName){
-    filePath.push(pathList[i])
+    filePath+=pathList[i]
     break;
   }
 }
   }
-  return filePath.join('\\')
+  return filePath
 }
 
 console.log(findFilePath(pathList,"fileC"))
